@@ -76,3 +76,9 @@ end
 
 gem 'ridgepole'
 gem 'pry-rails'
+
+# github login
+gem 'omniauth-github'
+gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
+gem "octokit"
