@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :oauths, dependent: :destroy
+  accepts_nested_attributes_for :oauths
+
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :avatar, presence: true
