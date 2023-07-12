@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  authenticates_with_sorcery!
   has_many :oauths, dependent: :destroy
   accepts_nested_attributes_for :oauths
 
