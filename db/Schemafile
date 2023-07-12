@@ -1,5 +1,8 @@
 create_table "users", charset: "utf8mb4", force: :cascade do |t|
   t.integer "user_id", null: false
+  t.string "name", null: false
+  t.string "email", null: false, unieque: true
+  t.string "avatar", null: false
   t.string "provider", null: false
   t.string "uid", null: false
   t.datetime "created_at", null: false
