@@ -82,3 +82,4 @@ gem 'omniauth-github'
 gem 'omniauth'
 gem "omniauth-rails_csrf_protection"
 gem "octokit"
+gem 'dotenv-rails', groups: [:development, :test]
