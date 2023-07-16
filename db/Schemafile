@@ -13,3 +13,20 @@ create_table "authentications", charset: "utf8mb4", force: :cascade do |t|
   t.index "provider"
   t.index "uid"
 end
+
+create_table "posts", charset: "utf8mb4", force: :cascade do |t|
+  t.integer "class", null: false
+  t.string "name", null: false
+  t.string "app_name", null: false
+  t.string "contact"
+  t.text "app_url", null: false
+  t.text "github_url", null: false
+  t.text "usage_technology", null: false
+  t.text "points_for_effort", null: false
+  t.text "target_users", null: false
+  t.text "pain_point", null: false
+  t.text "solution", null: false
+  t.text "comment", null: false
+  t.string "email", null: false, unieque: true
+  t.string "avatar"
+end
