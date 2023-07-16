@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root to: 'static_pages#top'
+  post 'oauth/callback', to: 'oauths#callback'
+  get 'oauth/callback', to: 'oauths#callback'
+  get 'oauth/:provider', to: 'oauths#oauth', as: :auth_at_provider
+  get 'oauths/secret_word', to: 'oauths#secret_word'
+  post 'oauths/secret_word', to: 'oauths#secret_word'
+  get 'login', to: 'oauths#login', as: :login
+  delete 'logout', to: 'oauths#destroy', as: :logout
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :users, only: [:index, :show, :edit, :update, :destroy]
 end
