@@ -27,4 +27,6 @@ create_table "posts", charset: "utf8mb4", force: :cascade do |t|
   t.text "pain_point", null: false
   t.text "remedy", null: false
   t.text "comment", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
 end

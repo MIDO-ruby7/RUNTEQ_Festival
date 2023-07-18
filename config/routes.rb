@@ -9,7 +9,15 @@ Rails.application.routes.draw do
   delete 'logout', to: 'oauths#destroy', as: :logout
 
   resources :users, only: %i[index show edit update destroy]
-  resources :posts, only: %i[index show new create edit update destroy] do
-    collection { post :import }
+  resources :posts, only: %i[index show]
+
+  namespace :admin do
+    root to: 'posts#index'
+    get 'login', to: 'user_sessions#new'
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy'
+    resources :posts, only: %i[index show new create edit update destroy] do
+      collection { post :import }
+    end
   end
 end
