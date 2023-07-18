@@ -1,4 +1,4 @@
-<div class="card w-auto bg-base-100 shadow-xl m-3 border-4 border-indigo-300/75">
+<div class="card w-auto bg-base-100 shadow-xl m-2 border-4 border-indigo-300/75">
 <iframe src=<%= post.app_url %> alt=<%= post.app_name %> class="w-full h-64" ></iframe>
   <div class="card-body">
     <div class="card-title"><%= post.app_name %></div>
@@ -9,9 +9,9 @@
     <div class="badge badge-primary  badge-outline">ユーザーの課題</div><div><%= post.pain_point %></div>
     <div class="badge badge-primary  badge-outline">このアプリが提供できる解決策</div><div><%= post.remedy %></div>
     <div class="badge badge-primary  badge-outline">このアプリへの想い</div><div><%= post.comment %></div>
-    <div class="card-actions justify-end">
-      <%= link_to '使ってみる', post.app_url, target: '_blank', class:"btn btn-sm btn-secondary" %>
-      <%= link_to 'コードを見る', post.github_url, target: '_blank', class:"btn btn-sm btn-outline" %>
+    <div class="flex flex-row mt-5">
+      <%= link_to '使ってみる', post.app_url, target: '_blank', class:"btn btn-sm btn-secondary mr-1" %>
+      <%= link_to 'コードを見る', post.github_url, target: '_blank', class:"btn btn-sm btn-outline mr-1" %>
       <%= link_to '詳細を見る/コメントする', post, class:"btn btn-sm btn-primary" %>
     </div>
   </div>
