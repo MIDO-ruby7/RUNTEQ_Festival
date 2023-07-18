@@ -1,16 +1,18 @@
-<div>
-  <%= post.app_name %>
-  <%= post.app_url %>
-  <%= post.github_url %>
-  <%= post.usage_technology %>
-  <%= post.points_for_effort %>
-  <%= post.target_users %>
-  <%= post.pain_point %>
-  <%= post.remedy %>
-  <%= post.comment %>
-</div>
-<div>
-  <%= post.graduating_class %>
-  <%= post.name %>
-  <%= post.contact %>
+<div class="card w-auto bg-base-100 shadow-xl m-3 border-4 border-indigo-300/75">
+<iframe src=<%= post.app_url %> alt=<%= post.app_name %> class="w-full h-64" ></iframe>
+  <div class="card-body">
+    <div class="card-title"><%= post.app_name %></div>
+    <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= post.name %></p>
+    <div><%= post.usage_technology %></div>
+    <div><%= post.points_for_effort %></div>
+    <div><%= post.target_users %></div>
+    <div><%= post.pain_point %></div>
+    <div><%= post.remedy %></div>
+    <div><%= post.comment %></div>
+    <div class="card-actions justify-end">
+      <%= link_to '使ってみる', post.app_url, target: '_blank', class:"btn btn-sm btn-secondary" %>
+      <%= link_to 'コードを見る', post.github_url, target: '_blank', class:"btn btn-sm btn-outline" %>
+      <%= link_to '詳細を見る/コメントする', post, class:"btn btn-sm btn-primary" %>
+    </div>
+  </div>
 </div>

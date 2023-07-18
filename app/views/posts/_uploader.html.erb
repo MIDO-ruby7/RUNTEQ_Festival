@@ -1,4 +1,4 @@
 <%= form_with url: import_posts_path, local: true, multipart: true do |form| %>
-  <%= form.file_field :file %>
-  <%= form.submit "インポート" %>
+  <%= form.file_field :file, class:"file-input file-input-bordered file-input-accent w-full max-w-xs"  %>
+  <%= form.submit "インポート", class:"btn ml-4" %>
 <% end %>
