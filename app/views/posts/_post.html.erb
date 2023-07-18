@@ -3,12 +3,12 @@
   <div class="card-body">
     <div class="card-title"><%= post.app_name %></div>
     <p class="card-actions justify-end font-bold"><%= post.graduating_class %>期&nbsp;&nbsp;<%= post.name %></p>
-    <div><%= post.usage_technology %></div>
-    <div><%= post.points_for_effort %></div>
-    <div><%= post.target_users %></div>
-    <div><%= post.pain_point %></div>
-    <div><%= post.remedy %></div>
-    <div><%= post.comment %></div>
+    <div class="badge badge-primary  badge-outline">使用技術</div><div><%= post.usage_technology %></div>
+    <div class="badge badge-primary  badge-outline">注目ポイント</div><div><%= post.points_for_effort %></div>
+    <div class="badge badge-primary  badge-outline">ターゲットユーザー</div><div><%= post.target_users %></div>
+    <div class="badge badge-primary  badge-outline">ユーザーの課題</div><div><%= post.pain_point %></div>
+    <div class="badge badge-primary  badge-outline">このアプリが提供できる解決策</div><div><%= post.remedy %></div>
+    <div class="badge badge-primary  badge-outline">このアプリへの想い</div><div><%= post.comment %></div>
     <div class="card-actions justify-end">
       <%= link_to '使ってみる', post.app_url, target: '_blank', class:"btn btn-sm btn-secondary" %>
       <%= link_to 'コードを見る', post.github_url, target: '_blank', class:"btn btn-sm btn-outline" %>
