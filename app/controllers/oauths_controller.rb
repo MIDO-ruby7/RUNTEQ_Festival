@@ -11,7 +11,7 @@ class OauthsController < ApplicationController
     provider = params[:provider]
     client = Octokit::Client.new(:access_token => ENV['GITHUB_PERSONAL_ACCESS_TOKEN'])
     if (@user = login_from(provider)) && client.organization_member?('runteq', @user.name )
-      redirect_to users_path,  success: t('.success')
+      redirect_to posts_path,  success: t('.success')
     else
       begin
         # 特定の組織にユーザーが所属しているかどうかを確認する
@@ -19,7 +19,7 @@ class OauthsController < ApplicationController
         if client.organization_member?('runteq', @user.name )
           reset_session
           auto_login(@user)
-          redirect_to users_path,  success: t('.success')
+          redirect_to posts_path,  success: t('.success')
         else
           redirect_to root_path, danger: t('.fail')
         end
