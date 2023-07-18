@@ -84,3 +84,6 @@ gem "omniauth-rails_csrf_protection"
 gem "octokit"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'sorcery'
+
+# csv import
+gem "roo", "~> 2.10.0"

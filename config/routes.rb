@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get 'login', to: 'oauths#login', as: :login
   delete 'logout', to: 'oauths#destroy', as: :logout
 
-  resources :users, only: [:index, :show, :edit, :update, :destroy]
+  resources :users, only: %i[index show edit update destroy]
+  resources :posts, only: %i[index show new create edit update destroy] do
+    collection { post :import }
+  end
 end
