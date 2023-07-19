@@ -1,7 +1,10 @@
 create_table "users", charset: "utf8mb4", force: :cascade do |t|
   t.string "name", null: false
+  t.string "nickname"
   t.string "email", null: false, unieque: true
   t.string "avatar"
+  t.integer "graduating_class"
+  t.integer "role", default: 0, null: false
 end
 
 create_table "authentications", charset: "utf8mb4", force: :cascade do |t|
