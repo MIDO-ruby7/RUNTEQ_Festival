@@ -1,0 +1,28 @@
+<div class="overflow-x-auto">
+  <table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Avatar</th>
+      <th>Graduating class</th>
+      <th>Role</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <th><%= user.id %></th>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.avatar %></td>
+        <td><%= user.graduating_class %></td>
+        <td><%= user.role %></td>
+        <td><%= link_to '📝', edit_admin_user_path(user) %></td>
+        <td><%= button_to '🗑', admin_user_path(user), method: :delete,  data: { turbo_confirm: "Are you sure?" } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
