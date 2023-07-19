@@ -2,14 +2,17 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: [:edit, :update, :destroy]
 
   def index
-    @users = User.all
+    @users = User.all.order(id: :asc)
   end
 
   def edit; end
 
   def update
-    @user.update(user_params)
-    redirect_to admin_users_path
+    if @user.update(user_params)
+      redirect_to admin_users_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
