@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'login', to: 'oauths#login', as: :login
   delete 'logout', to: 'oauths#destroy', as: :logout
 
-  resources :users, only: %i[index show edit update destroy]
+  resources :users, only: %i[index show edit update]
   resources :posts, only: %i[index show]
 
   namespace :admin do
