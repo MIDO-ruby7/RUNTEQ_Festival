@@ -87,3 +87,7 @@ gem 'sorcery'
 
 # csv import
 gem "roo", "~> 2.10.0"
+
+#i18n
+gem 'enum_help'
+gem 'rails-i18n'
