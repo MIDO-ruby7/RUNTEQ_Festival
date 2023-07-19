@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Runfes</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <div class="navbar bg-accent bg-base-100 mb-8">
+      <%= link_to 'RUNTEQ祭 Admin', admin_root_path, class:"btn btn-ghost normal-case text-xl" %>
+    </div>
+    <%= yield %>
+  </body>
+</html>

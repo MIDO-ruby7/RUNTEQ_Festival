@@ -12,12 +12,13 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index show]
 
   namespace :admin do
-    root to: 'posts#index'
+    root to: 'base#top'
     get 'login', to: 'user_sessions#new'
     post 'login', to: 'user_sessions#create'
     delete 'logout', to: 'user_sessions#destroy'
     resources :posts, only: %i[index show new create edit update destroy] do
       collection { post :import }
     end
+    resources :users, only: %i[index edit update destroy]
   end
 end
