@@ -17,6 +17,11 @@ class Admin::PostsController < Admin::BaseController
     end
   end
 
+  def destroy
+    @post.destroy
+    redirect_to admin_posts_path
+  end
+
 
   def import
     Admin.import(params[:file])
