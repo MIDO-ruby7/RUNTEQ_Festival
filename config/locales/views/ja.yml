@@ -73,13 +73,3 @@ ja:
       top:
         post_edit: 'データを登録/編集する'
         user_edit: 'ユーザーを管理する'
-    posts:
-
-    searches:
-      index:
-        title: '商品を検索してください'
-        no_result: '検索結果がありません'
-        alert: '故障中😇お手数ですが一度画面をリロードしてください🙏'
-        placeholder: '商品を入力'
-        no_result: '😭検索結果が無い場合、まだ登録がありません'
-        new: 'BoozePediaに新しいページを刻んでください'
