@@ -20,5 +20,6 @@ Rails.application.routes.draw do
       collection { post :import }
     end
     resources :users, only: %i[index edit update destroy]
+    resources :categories, only: %i[index new create edit update destroy]
   end
 end

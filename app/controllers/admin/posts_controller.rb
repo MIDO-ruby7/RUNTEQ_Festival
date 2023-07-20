@@ -25,7 +25,8 @@ class Admin::PostsController < Admin::BaseController
 
 
   def import
-    Admin.import(params[:file])
+    category_id = params[:category_id]
+    Admin.import(params[:file], category_id)
     redirect_to admin_posts_path, notice: t('defaults.message.success')
   end
 
@@ -36,6 +37,6 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def post_params
-    params.require(:post).permit(:graduating_class, :name, :app_name, :contact, :app_url, :github_url, :usage_technology, :points_for_effort, :target_users, :pain_point, :remedy, :comment)
+    params.require(:post).permit(:graduating_class, :name, :app_name, :contact, :app_url, :github_url, :usage_technology, :points_for_effort, :target_users, :pain_point, :remedy, :comment, :category_id)
   end
 end

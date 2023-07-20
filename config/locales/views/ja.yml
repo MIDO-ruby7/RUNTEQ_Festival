@@ -15,6 +15,7 @@ ja:
     login_required: 'ログインしてください'
     logout: 'ログアウト'
     signup: '新規登録'
+    submit: '登録'
     edit: '編集'
     delete: '削除'
     import: 'インポート'
@@ -74,3 +75,16 @@ ja:
       top:
         post_edit: 'データを登録/編集する'
         user_edit: 'ユーザーを管理する'
+        category_edit: 'カテゴリーを管理する'
+    categories:
+      index:
+        new: '新しいカテゴリーを登録する'
+        no_categories: 'カテゴリーがありません'
+      create:
+        success: 'カテゴリーを作成しました'
+        fail: 'カテゴリーを作成できませんでした'
+      update:
+        success: 'カテゴリーを更新しました'
+        fail: 'カテゴリーを更新できませんでした'
+      destroy:
+        success: 'カテゴリーを削除しました'
