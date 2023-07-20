@@ -88,3 +88,6 @@ ja:
         fail: 'カテゴリーを更新できませんでした'
       destroy:
         success: 'カテゴリーを削除しました'
+    posts:
+      index:
+        open_uploader: 'データの新規登録はここをクリック'

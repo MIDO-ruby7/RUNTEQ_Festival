@@ -2,7 +2,9 @@ class Admin::PostsController < Admin::BaseController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order(id: :asc)
+    @categories = Category.all
+    @selected_category_id = params[:category_id]
+    @posts = filtered_posts
   end
 
   def show; end
@@ -38,5 +40,13 @@ class Admin::PostsController < Admin::BaseController
 
   def post_params
     params.require(:post).permit(:graduating_class, :name, :app_name, :contact, :app_url, :github_url, :usage_technology, :points_for_effort, :target_users, :pain_point, :remedy, :comment, :category_id)
+  end
+
+  def filtered_posts
+    if @selected_category_id.present?
+      Post.where(category_id: @selected_category_id)
+    else
+      Post.all.order(id: :desc)
+    end
   end
 end

@@ -19,7 +19,8 @@ Rails.application.routes.draw do
     resources :posts, only: %i[index show new create edit update destroy] do
       collection { post :import }
     end
+
     resources :users, only: %i[index edit update destroy]
-    resources :categories, only: %i[index new create edit update destroy]
+    resources :categories, only: %i[index edit update destroy]
   end
 end
