@@ -42,6 +42,7 @@ ja:
       fail: '更新できませんでした'
       Are_you_sure: '本当に削除しますか？'
       select: '選択してください'
+      select_default: '過去の作品はこちらから'
   oauths:
     callback:
       success: 'ログインしました'

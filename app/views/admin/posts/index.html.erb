@@ -11,7 +11,7 @@
 <div>
   <%= form_with url: admin_posts_path, method: :get, local: true do |form| %>
     <div class="mb-4">
-      <%= form.collection_select :category_id, Category.all.order(id: :asc), :id, :name, { prompt: "Select a category" }, class: "select select-bordered select-primary w-full max-w-xs" %>
+      <%= form.collection_select :category_id, Category.all.order(id: :asc), :id, :name, { prompt:  t('defaults.message.select_default') }, class: "select select-bordered select-primary w-full max-w-xs" %>
       <%= form.submit "Filter", class: "btn btn-primary ml-2" %>
     </div>
   <% end %>
