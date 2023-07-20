@@ -38,6 +38,7 @@ ja:
       not_authorized: '管理者権限がありません'
       success: '更新しました'
       fail: '更新できませんでした'
+      Are_you_sure: '本当に削除しますか？'
   oauths:
     callback:
       success: 'ログインしました'
