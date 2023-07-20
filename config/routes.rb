@@ -21,6 +21,6 @@ Rails.application.routes.draw do
     end
 
     resources :users, only: %i[index edit update destroy]
-    resources :categories, only: %i[index edit update destroy]
+    resources :categories, only: %i[index new create edit update destroy]
   end
 end

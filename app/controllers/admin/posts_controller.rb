@@ -46,7 +46,7 @@ class Admin::PostsController < Admin::BaseController
     if @selected_category_id.present?
       Post.where(category_id: @selected_category_id)
     else
-      Post.all.order(id: :desc)
+      Post.where(category_id: @categories.last.id)
     end
   end
 end
