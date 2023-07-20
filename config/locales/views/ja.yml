@@ -15,9 +15,11 @@ ja:
     login_required: 'ログインしてください'
     logout: 'ログアウト'
     signup: '新規登録'
+    submit: '登録'
     edit: '編集'
     delete: '削除'
     import: 'インポート'
+    filter: 'Filter'
     back: '戻る'
     cancel: 'キャンセル'
     page_now: 'pages now'
@@ -39,6 +41,8 @@ ja:
       success: '更新しました'
       fail: '更新できませんでした'
       Are_you_sure: '本当に削除しますか？'
+      select: '選択してください'
+      select_default: '過去の作品はこちらから'
   oauths:
     callback:
       success: 'ログインしました'
@@ -74,3 +78,20 @@ ja:
       top:
         post_edit: 'データを登録/編集する'
         user_edit: 'ユーザーを管理する'
+        category_edit: 'カテゴリーを管理する'
+    categories:
+      index:
+        new: '新しいカテゴリーを登録する'
+        no_categories: 'カテゴリーがありません'
+      create:
+        success: 'カテゴリーを作成しました'
+        fail: 'カテゴリーを作成できませんでした'
+      update:
+        success: 'カテゴリーを更新しました'
+        fail: 'カテゴリーを更新できませんでした'
+      destroy:
+        success: 'カテゴリーを削除しました'
+    posts:
+      index:
+        open_uploader: '➡️データの新規登録はここをクリック'
+        category_edit: '※カテゴリーがない場合は先にここから登録してください'
