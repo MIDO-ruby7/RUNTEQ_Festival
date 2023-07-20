@@ -21,7 +21,7 @@ class OauthsController < ApplicationController
           auto_login(@user)
           redirect_to posts_path,  success: t('.success')
         else
-          redirect_to root_path, danger: t('.fail')
+          redirect_to root_path, danger: t('.no_organization')
         end
       rescue
         redirect_to root_path, danger: t('.fail')

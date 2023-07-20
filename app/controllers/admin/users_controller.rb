@@ -9,8 +9,9 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_users_path
+      redirect_to admin_users_path, notice: t('defaults.message.success')
     else
+      flash.now[:warning] = t('defaults.message.fail')
       render :edit, status: :unprocessable_entity
     end
   end
