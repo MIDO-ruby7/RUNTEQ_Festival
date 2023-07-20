@@ -1,0 +1,85 @@
+ja:
+  defaults:
+    app: 'RUNTEQ祭'
+    app_admin: 'RUNTEQ祭管理画面'
+    catch_copy1: 'バトランが甲子園なら、RUNTEQ祭は文化祭🎉'
+    catch_copy2: 'Take Ownershipで、全員で楽しみましょう!!'
+    site_title: 'RUNTEQ祭|RUNTEQの文化祭🎉'
+    cta: '使ってみる'
+    site_url: 'http://boozefolio.herokuapp.com'
+    watch_code: 'コードを見る'
+    show: '詳細を見る/コメントする'
+    menu3: 'お気に入り'
+    menu4: 'マイページ'
+    login: 'ログイン'
+    login_required: 'ログインしてください'
+    logout: 'ログアウト'
+    signup: '新規登録'
+    edit: '編集'
+    delete: '削除'
+    import: 'インポート'
+    back: '戻る'
+    cancel: 'キャンセル'
+    page_now: 'pages now'
+    graduating_class: '期'
+    name: '名前'
+    app_name: 'アプリ名'
+    contact: '連絡先'
+    app_url: 'アプリURL'
+    github_url: 'GitHub URL'
+    usage_technology: '使用技術'
+    points_for_effort: '工夫した点'
+    target_users: 'ターゲットユーザー'
+    pain_point: '課題'
+    remedy: '解決策'
+    comment: 'コメント'
+    message:
+      require_login: 'ログインしてください'
+      not_authorized: '管理者権限がありません'
+      success: '更新しました'
+      fail: '更新できませんでした'
+  oauths:
+    callback:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+      no_organization: 'RUNTEQに属していないアカウントは入場できません'
+    destroy:
+      success: 'ログアウトしました'
+      fail: 'ログアウトに失敗しました'
+  static_pages:
+    top:
+      title: 'RUNTEQ祭入場ゲート'
+  users:
+    show:
+      title: 'ユーザー名を変更する'
+    edit:
+      title: 'ユーザー名を変更する'
+    update:
+      success: 'ユーザー名を変更しました'
+      fail: 'ユーザー名を変更できませんでした'
+  posts:
+    index:
+      titile: 'エントリー作品一覧'
+    show:
+    edit:
+      title: '商品編集'
+    update:
+      success: '更新しました'
+      fail: '更新できませんでした'
+    destroy:
+      success: '削除しました'
+  admin:
+    base:
+      top:
+        post_edit: 'データを登録/編集する'
+        user_edit: 'ユーザーを管理する'
+    posts:
+
+    searches:
+      index:
+        title: '商品を検索してください'
+        no_result: '検索結果がありません'
+        alert: '故障中😇お手数ですが一度画面をリロードしてください🙏'
+        placeholder: '商品を入力'
+        no_result: '😭検索結果が無い場合、まだ登録がありません'
+        new: 'BoozePediaに新しいページを刻んでください'

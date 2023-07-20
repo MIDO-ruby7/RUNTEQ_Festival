@@ -11,8 +11,9 @@ class Admin::PostsController < Admin::BaseController
 
   def update
     if @post.update(post_params)
-      redirect_to admin_posts_path
+      redirect_to admin_posts_path, notice: t('defaults.message.success')
     else
+      flash.now[:warning] = t('defaults.message.fail')
       render :edit, status: :unprocessable_entity
     end
   end
@@ -25,7 +26,7 @@ class Admin::PostsController < Admin::BaseController
 
   def import
     Admin.import(params[:file])
-    redirect_to admin_posts_path
+    redirect_to admin_posts_path, notice: t('defaults.message.success')
   end
 
   private
