@@ -9,7 +9,7 @@ ja:
     site_url: 'http://boozefolio.herokuapp.com'
     watch_code: 'コードを見る'
     show: '詳細を見る'
-    comment: 'コメントする'
+    post_comment: 'コメントする'
     menu3: 'お気に入り'
     menu4: 'マイページ'
     login: 'ログイン'
@@ -36,6 +36,7 @@ ja:
     target_users: 'ターゲットユーザー'
     pain_point: '課題'
     remedy: '解決策'
+    comment: 'このアプリへの想い,コメント'
     message:
       require_login: 'ログインしてください'
       not_authorized: '管理者権限がありません'
