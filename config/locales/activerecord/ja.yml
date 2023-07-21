@@ -5,6 +5,7 @@ ja:
       post: '応募作品'
       admin: '管理者'
       category: 'カテゴリー'
+      comment: 'コメント'
     attributes:
       user:
         name: '名前'
@@ -28,6 +29,8 @@ ja:
         comment: 'コメント'
       category:
         name: 'カテゴリー'
+      comment:
+        body: 'コメント'
 
   enums:
     user:
