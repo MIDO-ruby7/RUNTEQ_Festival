@@ -4,6 +4,6 @@
     <%= simple_format(comment.body) %>
   </div>
   <% if current_user.own?(comment) %>
-    <%= link_to t('posts.show.delete'), comment_path(comment), method: :delete, data: { confirm: 'コメントを削除しますか？' }, class:"btn btn-circle btn-sm" %>
+    <%= button_to t('posts.show.delete'), comment_path(comment), method: :delete, data: { confirm: t('defaults.message.Are_you_sure') }, class:"btn btn-circle btn-sm" %>
   <% end %>
 </div>
