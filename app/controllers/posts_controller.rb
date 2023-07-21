@@ -7,6 +7,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user).order(created_at: :desc) if @post
   end
 
   private

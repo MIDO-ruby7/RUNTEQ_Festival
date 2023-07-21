@@ -21,8 +21,8 @@
       <div class="flex flex-row mt-5">
         <%= link_to t('defaults.cta'), post.app_url, target: '_blank', class:"btn btn-sm btn-secondary mr-1" %>
         <%= link_to t('defaults.watch_code'), post.github_url, target: '_blank', class:"btn btn-sm btn-outline mr-1" %>
-        <%= link_to t('defaults.comment'), post, class:"btn btn-sm btn-primary" %>
       </div>
+      <%= link_to t('defaults.comment'), post_path(post), class:"btn btn-sm btn-primary mt-2" %>
     </div>
   </div>
 </div>

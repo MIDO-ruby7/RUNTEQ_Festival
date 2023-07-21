@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   delete 'logout', to: 'oauths#destroy', as: :logout
 
   resources :users, only: %i[index show edit update]
-  resources :posts, only: %i[index show]
+  resources :posts, only: %i[index show] do
+    resources :comments, only: %i[create], shallow: true
+  end
 
   namespace :admin do
     root to: 'base#top'
