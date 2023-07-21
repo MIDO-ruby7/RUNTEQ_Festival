@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show edit update]
   resources :posts, only: %i[index show] do
-    resources :comments, only: %i[create], shallow: true
+    resources :comments, only: %i[create edit update delete], shallow: true
   end
 
   namespace :admin do

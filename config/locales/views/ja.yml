@@ -68,6 +68,8 @@ ja:
     index:
       titile: 'エントリー作品一覧'
     show:
+      contact_text: "%{name}さんの連絡先はこちら"
+      delete: '🗑'
     edit:
       title: '商品編集'
     update:
