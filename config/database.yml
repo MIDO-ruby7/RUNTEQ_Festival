@@ -81,7 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: runfes_production
-  username: runfes
-  password: <%= ENV["RUNFES_DATABASE_PASSWORD"] %>
   url: <%= ENV['DATABASE_URL'] %>
